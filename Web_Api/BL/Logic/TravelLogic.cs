@@ -13,7 +13,7 @@ namespace BL.Logic
         static RavKav db = new RavKav();
 
         public static void Month(int id, DateTime time)
-        {
+        {//
             //שליפה של כל החודש לפי שנה למשתמש מסוים
             List<Travel> travelsById = db.Travels.Where(x => x.userID == id && x.date.Year == time.Year && x.date.Month == time.Month).OrderBy(x => x.price).ThenByDescending(x => x.areaID).ToList();
             //שליפה של כל החוזים שמתאימים לנסיעות של המשתמש
